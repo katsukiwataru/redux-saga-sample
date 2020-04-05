@@ -1,9 +1,9 @@
-import { put, takeEvery, all } from 'redux-saga/effects';
+import { put, takeEvery, all, call } from 'redux-saga/effects';
 
 const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
 function* incrementAsync() {
-  yield delay(1000);
+  yield call(delay, 1000);
   yield put({ type: 'INCREMENT' });
 }
 
