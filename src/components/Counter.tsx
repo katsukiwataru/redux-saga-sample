@@ -1,8 +1,21 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+// import { decrementAction } from '../actions';
 
 export const Counter: React.FC = () => {
   const dispatch = useDispatch();
+  // const decrement = () => {
+  //   dispatch(decrementAction(1));
+  // };
+
+  // const increment = () => {
+  //   dispatch({ type: 'INCREMENT' });
+  // };
+
+  // const incrementAsync = () => {
+  //   dispatch({ type: 'INCREMENT_ASYNC' });
+  // };
+
   const decrement = () => {
     dispatch({ type: 'DECREMENT' });
   };
