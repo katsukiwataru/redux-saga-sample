@@ -17,12 +17,6 @@ export const reducer: Reducer<CounterState, Actions> = (state = initialState, ac
       return { ...state, number: state.number % 2 !== 0 ? state.number + 1 : state.number };
     case 'DECREMENT':
       return { ...state, number: state.number - 1 };
-    // case 'INCREMENT':
-    //   return { ...state, number: action.payload };
-    // case 'INCREMENT_IF_ODD':
-    //   return { ...state, number: action.payload };
-    // case 'DECREMENT':
-    //   return { ...state, number: action.payload };
     default:
       return { ...state };
   }
