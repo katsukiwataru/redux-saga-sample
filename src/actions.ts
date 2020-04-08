@@ -15,19 +15,9 @@ interface Decrement extends Action {
   payload: number;
 }
 
-// export const decrementAction = (payload: number): Decrement => ({
-//   type: 'DECREMENT',
-//   payload,
-// });
+interface ErrorInPut extends Action {
+  type: 'ACTION_ERROR_IN_PUT';
+  payload: number;
+}
 
-// export const incrementAction = (payload: number): Increment => ({
-//   type: 'INCREMENT',
-//   payload,
-// });
-
-// export const incrementAsyncAction = (payload: number): IncrementIfOdd => ({
-//   type: 'INCREMENT_IF_ODD',
-//   payload,
-// });
-
-export type Actions = Increment | IncrementIfOdd | Decrement;
+export type Actions = Increment | IncrementIfOdd | Decrement | ErrorInPut;
