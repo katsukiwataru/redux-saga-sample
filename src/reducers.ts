@@ -17,6 +17,8 @@ export const reducer: Reducer<CounterState, Actions> = (state = initialState, ac
       return { ...state, number: state.number % 2 !== 0 ? state.number + 1 : state.number };
     case 'DECREMENT':
       return { ...state, number: state.number - 1 };
+    case 'ACTION_ERROR_IN_PUT':
+      throw new Error('error in put');
     default:
       return { ...state };
   }
